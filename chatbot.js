@@ -348,9 +348,12 @@
                  .then(function (data) {
                      console.log(data);
 
+                     Array.isArray(data);
+                     data = data[0];
+
                      if ('noun' in data.meaning) {
 
-
+                        console.log(data.meaning)
                          for (let def of data.meaning.noun) {
 
                              const phrase = `${def.definition}`;
